@@ -34,6 +34,14 @@ const ChatBotApp = ({onGoBack, chats, setChats}) => {
 
   }
 
+  const handleKeyDown = (e) => {
+
+    if(e.key === 'Enter'){
+        e.preventDefault()
+        sendMessage()
+    }
+  }
+
   return (
     <div className ='chat-app'>
         <div className = 'chat-list'>
